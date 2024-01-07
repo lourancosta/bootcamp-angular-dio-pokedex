@@ -1,0 +1,291 @@
+.pokedex-logo {
+    max-width: 200px;
+}
+
+.pokemons {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.normal {
+    background-color: #c8c99c;
+}
+
+.grass {
+    background-color: #47d0b2;
+}
+
+.fire {
+    background-color: #fb6c6c;
+}
+
+.water {
+    background-color: #77beff;
+}
+
+.electric {
+    background-color: #fed04a;
+}
+
+.ice {
+    background-color: #98d5d7;
+}
+
+.ground {
+    background-color: #b07470;
+}
+
+.flying {
+    background-color: #a98ff0;
+}
+
+.poison {
+    background-color: #bf68bf;
+}
+
+.fighting {
+    background-color: #bf3029;
+}
+
+.psychic {
+    background-color: #f65687;
+}
+
+.dark {
+    background-color: #484746;
+}
+
+.rock {
+    background-color: #dbba27;
+}
+
+.bug {
+    background-color: #c7d140;
+}
+
+.ghost {
+    background-color: #6e5896;
+}
+
+.steel {
+    background-color: #b9b7cf;
+}
+
+.dragon {
+    background-color: #6f38f6;
+}
+
+.fairy {
+    background-color: #f9aec7;
+}
+
+.pokemon { 
+   margin: .5rem;
+   padding: 1rem;
+   color: white;
+   border-radius: 1rem;
+   display: flex;
+   flex-direction: column;
+   cursor: pointer;
+}
+
+.pokemon .number {
+    color: #000;
+    opacity: .3;
+    text-align: right;
+    font-size: .625rem;
+}
+
+.name {
+    color: #fff;
+    margin-bottom: 0;
+    text-transform: capitalize;
+}
+
+.pokemon .detail {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.types {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.types .type {
+    color: white;
+    padding: .25rem .5rem;
+    margin: .25rem 0 ;
+    font-size: .625rem;
+    text-align: center;
+    border-radius: 1rem;
+    filter: brightness(1.1);
+}
+
+.pokemon .detail img {
+    max-width: 70px;
+    height: 70px;
+    align-self: flex-end;
+}
+
+.pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+}
+
+.pagination button {
+    padding: .25rem .5rem;
+    margin: .25rem 0;
+    font-size: .625rem;
+    color: #fff;
+    background-color: #6c79db;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+#fade {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 5;
+}
+
+#fade,
+#modal-view-pokemon {
+    transition: 0.3s;
+    opacity: 1;
+    pointer-events: all;
+}
+
+#modal-view-pokemon {
+    position: absolute;
+    left: 50%;
+    top: 50vh;
+    margin: 0 auto;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    max-width: 90%;
+    background-color: #fff;
+    border-radius: 1rem 1rem 0 0;
+    z-index: 6;
+}
+
+#fade.hide ,
+#modal-view-pokemon.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.header,
+.modal-header .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+.modal-header {
+    border-radius: 0.5rem;
+    padding: 2rem;
+}
+
+.modal-header .header {
+    margin-bottom: 1rem;
+}
+
+.modal-header .header .back-to-list {
+    cursor: pointer;
+}
+
+.modal-header .name {
+    font-size: 32px;
+    margin: 0;
+}
+
+.modal-header .types {
+    display: flex;
+    align-items: center;
+    justify-content: initial;
+}
+
+.modal-header .types .type {
+    color: white;
+    margin: .25rem;
+    padding: .2rem .4rem    ;
+    filter: brightness(-1.-1);
+}
+
+.modal-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.modal-image img {
+    max-width: 180px
+}
+
+.options {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.options .option {
+    color: #c5c2c2;
+    list-style: none;
+    font-size: 12px;
+    cursor: pointer;;
+}
+
+.active {
+    color: #000 !important;
+}
+
+.modal-infos  {
+    padding: 0 2rem;
+}
+
+.modal-infos .details {
+    margin-bottom: 24px;
+}
+
+.info span {
+    font-size: 12px;
+}
+
+.info .label {
+    color: #aaaaaa;
+    padding-right: 36px;
+}
+
+@media screen and (min-width: 380px ) {
+    .pokemons {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 962px) {
+    .pokemons {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+/* https://www.uplabs.com/posts/pokedex-app */
