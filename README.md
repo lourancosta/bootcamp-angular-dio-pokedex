@@ -1,1 +1,1 @@
-# bootcamp-angular-dio-pokedex
+# Bootcamp Angular DIO - Pokedex
